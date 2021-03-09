@@ -1,5 +1,6 @@
 import path from 'path';
 import express from 'express';
+import morgan from 'morgan';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import productRoutes from "./routes/productRoutes.js";
@@ -9,8 +10,11 @@ import uploadRoutes from './routes/uploadRoutes.js';
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 const app = express()
-
 dotenv.config()
+
+if(process.env.NODE_ENV === 'development'){
+    app.use(morgan('dev'))
+}
 
 connectDB()
 
