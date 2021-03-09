@@ -6,6 +6,8 @@ This is an e-commerce website where users can buy electronic gadgets. Users can 
 
 This app is deployed using [heroku](https://dashboard.heroku.com/)
 
+LINK: https://proshopapp24.herokuapp.com/
+
 ## Prerequisites
 
 - [Download Node.js](https://nodejs.org/en/)
